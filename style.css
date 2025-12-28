@@ -1,0 +1,215 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  
+  body {
+    background-color: #f5f5f5;
+    color: #222;
+  }
+  
+  header {
+    background-color: #004080;
+    color: #fff;
+    padding: 15px 0;
+  }
+  
+  .navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar .logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  
+  .main-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  
+  /* Hero / accueil */
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .hero-text {
+    flex: 1 1 280px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero-text p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .btn-primary {
+    background-color: #004080;
+    color: #fff;
+  }
+  
+  .btn-secondary {
+    background-color: #fff;
+    color: #004080;
+    border: 1px solid #004080;
+  }
+  
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    opacity: 0.9;
+  }
+  
+  /* Cartes / sections */
+  .card {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    margin-top: 25px;
+  }
+  
+  /* Formulaires */
+  .form-container {
+    max-width: 420px;
+    margin: 30px auto;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: #004080;
+  }
+  
+  .form-actions {
+    margin-top: 10px;
+  }
+  
+  .form-footer {
+    margin-top: 10px;
+    font-size: 0.85rem;
+  }
+  
+  /* Tableau bulletin */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #004080;
+    color: #fff;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:hover {
+    background-color: #eef5ff;
+  }
+  
+  /* Dashboard */
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 40px;
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+    }
+  
+    .navbar ul {
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+  }
