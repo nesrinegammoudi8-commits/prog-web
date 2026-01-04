@@ -4,23 +4,30 @@
   <meta charset="UTF-8">
   <title>Portail Étudiant ESEN - Bulletin</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- 🔐 Protection accès -->
+  <script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
 </head>
 <body>
+
 <header>
   <nav class="navbar">
     <div class="logo">ESEN | Portail Étudiant</div>
     <ul>
       <li><a href="acceuil.html">Accueil</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="registre.html">Inscription</a></li>
       <li><a href="dashboard.html">Tableau de bord</a></li>
       <li><a href="bulletin.html">Bulletin</a></li>
+      <li><a href="#" onclick="logout()">Déconnexion</a></li>
     </ul>
   </nav>
 </header>
 
 <main class="main-container">
-  <h1>Bulletin de notes - Année 2024 / 2025</h1>
+  <h1>Bulletin de notes – Année 2024 / 2025</h1>
 
   <section class="card">
     <h2>Informations étudiant</h2>
@@ -33,7 +40,7 @@
   <section class="card">
     <h2>Détails des notes</h2>
 
-    <table>
+    <table border="1" class="bulletin-table">
       <thead>
         <tr>
           <th>Module</th>
@@ -82,16 +89,20 @@
       </tbody>
     </table>
 
-    <p style="margin-top: 15px;">
-      Moyenne générale (exemple) : <strong>14.25 / 20</strong> – Mention Bien.
+    <p class="bulletin-moyenne">
+      Moyenne générale (exemple) :
+      <strong>14.25 / 20</strong> – Mention Bien
     </p>
 
-    <p style="margin-top: 10px;">
-      Ce bulletin est un exemple statique utilisé pour le projet de programmation Web.
+    <p class="bulletin-info">
+      Ce bulletin est un exemple statique utilisé pour le projet
+      de programmation Web.
     </p>
 
-    <div style="margin-top: 20px;">
-      <a href="dashboard.html" class="btn btn-secondary">Retour au tableau de bord</a>
+    <div class="bulletin-actions">
+      <a href="dashboard.html" class="btn btn-secondary">
+        Retour au tableau de bord
+      </a>
     </div>
   </section>
 </main>
@@ -99,5 +110,13 @@
 <footer>
   &copy; 2025 - Portail Étudiant ESEN. Projet de programmation Web.
 </footer>
+
+<script>
+  function logout() {
+    localStorage.removeItem("isLoggedIn");
+    window.location.href = "login.html";
+  }
+</script>
+
 </body>
 </html>
