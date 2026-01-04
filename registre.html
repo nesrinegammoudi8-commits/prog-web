@@ -2,81 +2,27 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Portail Étudiant ESEN - Inscription</title>
+  <title>Inscription ESEN</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <nav class="navbar">
-    <div class="logo">ESEN | Portail Étudiant</div>
-    <ul>
-      <li><a href="acceuil.html">Accueil</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="registre.html">Inscription</a></li>
-      <li><a href="dashboard.html">Tableau de bord</a></li>
-      <li><a href="bulletin.html">Bulletin</a></li>
-    </ul>
-  </nav>
-</header>
 
-<main class="main-container">
-  <div class="form-container card">
-    <h2>Créer un compte étudiant</h2>
-    <form>
-      <div class="form-group">
-        <label for="nom">Nom</label>
-        <input id="nom" type="text" placeholder="Votre nom" required>
-      </div>
+<header class="simple-header">Inscription Étudiant</header>
 
-      <div class="form-group">
-        <label for="prenom">Prénom</label>
-        <input id="prenom" type="text" placeholder="Votre prénom" required>
-      </div>
+<main class="form-container card">
+  <form onsubmit="return verifierInscription()">
+    <h2>Créer un compte</h2>
 
-      <div class="form-group">
-        <label for="email">Email institutionnel</label>
-        <input id="email" type="email" placeholder="exemple@esen.tn" required>
-      </div>
+    <input id="nom" placeholder="Nom">
+    <input id="prenom" placeholder="Prénom">
+    <input id="mail" type="email" placeholder="Email ESEN">
+    <input id="pass" type="password" placeholder="Mot de passe">
+    <input id="confirm" type="password" placeholder="Confirmation">
 
-      <div class="form-group">
-        <label for="numEtu">Numéro d'étudiant</label>
-        <input id="numEtu" type="text" placeholder="Ex : 2025XXXX" required>
-      </div>
-
-      <div class="form-group">
-        <label for="groupe">Groupe</label>
-        <select id="groupe" required>
-          <option value="">Sélectionnez un groupe</option>
-          <option>G1</option>
-          <option>G2</option>
-          <option>G3</option>
-          <option>G4</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="password">Mot de passe</label>
-        <input id="password" type="password" placeholder="Mot de passe" required>
-      </div>
-
-      <div class="form-group">
-        <label for="confirm">Confirmer le mot de passe</label>
-        <input id="confirm" type="password" placeholder="Répétez le mot de passe" required>
-      </div>
-
-      <div class="form-actions">
-        <button type="submit" class="btn btn-primary">S'inscrire</button>
-      </div>
-
-      <p class="form-footer">
-        Déjà inscrit ? <a href="login.html">Se connecter</a>
-      </p>
-    </form>
-  </div>
+    <button class="btn btn-primary">S'inscrire</button>
+  </form>
 </main>
 
-<footer>
-  &copy; 2025 - Portail Étudiant ESEN. Projet de programmation Web.
-</footer>
+<script src="script.js"></script>
 </body>
 </html>
