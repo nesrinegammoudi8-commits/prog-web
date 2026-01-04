@@ -4,17 +4,24 @@
   <meta charset="UTF-8">
   <title>Portail Étudiant ESEN - Tableau de bord</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- 🔐 Protection accès -->
+  <script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
 </head>
 <body>
+
 <header>
   <nav class="navbar">
     <div class="logo">ESEN | Portail Étudiant</div>
     <ul>
       <li><a href="acceuil.html">Accueil</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="registre.html">Inscription</a></li>
       <li><a href="dashboard.html">Tableau de bord</a></li>
       <li><a href="bulletin.html">Bulletin</a></li>
+      <li><a href="#" onclick="logout()">Déconnexion</a></li>
     </ul>
   </nav>
 </header>
@@ -33,31 +40,40 @@
 
     <article class="card">
       <h2>Accès rapide</h2>
-      <p>Consultez votre bulletin de notes et vos informations principales.</p>
+      <p>Consultez votre bulletin de notes.</p>
       <a href="bulletin.html" class="btn btn-primary">Voir le bulletin</a>
     </article>
 
     <article class="card">
       <h2>Informations ESEN</h2>
       <p>
-        Retrouvez les informations générales sur les emplois du temps,
-        examens et annonces sur le site officiel de l'ESEN.
+        <a href="https://esen.rnu.tn/portail/">Emplois du temps, examens et annonces officielles:</a>  
       </p>
     </article>
   </section>
 
-  <section class="card" style="margin-top: 25px;">
+  <section class="card status-card">
     <h2>Statut</h2>
-    <p>Moyenne générale actuelle (exemple) : <strong>14.25 / 20</strong></p>
+    <p>Moyenne générale : <strong>14.25 / 20</strong></p>
   </section>
 
-  <section class="card" style="margin-top: 25px;">
-    <a href="acceuil.html" class="btn btn-secondary">Se déconnecter</a>
+  <section class="logout-section">
+    <button class="btn btn-secondary" onclick="logout()">
+      Se déconnecter
+    </button>
   </section>
 </main>
 
 <footer>
-  &copy; 2025 - Portail Étudiant ESEN. Projet de programmation Web.
+  &copy; 2025 - Portail Étudiant ESEN
 </footer>
+
+<script>
+  function logout() {
+    localStorage.removeItem("isLoggedIn");
+    window.location.href = "login.html";
+  }
+</script>
+
 </body>
 </html>
