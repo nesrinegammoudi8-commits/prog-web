@@ -4,13 +4,6 @@
   <meta charset="UTF-8">
   <title>Portail Étudiant ESEN - Tableau de bord</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- 🔐 Protection accès -->
-  <script>
-    if (localStorage.getItem("isLoggedIn") !== "true") {
-      window.location.href = "login.html";
-    }
-  </script>
 </head>
 <body>
 
@@ -21,7 +14,6 @@
       <li><a href="acceuil.html">Accueil</a></li>
       <li><a href="dashboard.html">Tableau de bord</a></li>
       <li><a href="bulletin.html">Bulletin</a></li>
-      <li><a href="#" onclick="logout()">Déconnexion</a></li>
     </ul>
   </nav>
 </header>
@@ -41,7 +33,7 @@
     <article class="card">
       <h2>Accès rapide</h2>
       <p>Consultez votre bulletin de notes.</p>
-      <a href="bulletin.html" class="btn btn-primary">Voir le bulletin</a>
+      <a href="bulltein.html" class="btn btn-primary">Voir le bulletin</a>
     </article>
 
     <article class="card">
@@ -57,23 +49,17 @@
     <p>Moyenne générale : <strong>14.25 / 20</strong></p>
   </section>
 
-  <section class="logout-section">
-    <button class="btn btn-secondary" onclick="logout()">
-      Se déconnecter
-    </button>
-  </section>
+  <section class="card status-card">
+  <a href="acceuil.html" class="btn btn-secondary">
+    Se déconnecter
+  </a>
+</section>
 </main>
 
 <footer>
   &copy; 2025 - Portail Étudiant ESEN
 </footer>
 
-<script>
-  function logout() {
-    localStorage.removeItem("isLoggedIn");
-    window.location.href = "login.html";
-  }
-</script>
-
 </body>
+</html>
 </html>
