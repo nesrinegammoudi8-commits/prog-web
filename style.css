@@ -1,95 +1,105 @@
+/* ===== STYLE GLOBAL ===== */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f2f7ff;
-  color: #003366;
+  margin: 0; /* Supprime les marges par défaut */
+  font-family: Arial, sans-serif; /* Police simple et lisible */
+  background: #f2f7ff; /* Couleur de fond claire */
+  color: #003366; /* Couleur du texte principale */
 }
 
+/* ===== NAVBAR / MENU ===== */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  background: #004080;
-  color: white;
+  display: flex; /* Mise en ligne horizontale */
+  justify-content: space-between; /* Écarte le logo et les liens */
+  padding: 15px; /* Espace à l’intérieur de la barre */
+  background: #004080; /* Couleur de fond bleu foncé */
+  color: white; /* Couleur du texte */
 }
 
 .navbar a {
-  color: white;
-  text-decoration: none;
-  margin-left: 15px;
+  color: white; /* Couleur des liens */
+  text-decoration: none; /* Supprime le soulignement par défaut */
+  margin-left: 15px; /* Espace entre chaque lien */
 }
 
+/* ===== SECTION HERO (ACCUEIL) ===== */
 .hero {
-  background: linear-gradient(to right, #004080, #007bff);
-  color: white;
-  padding: 60px;
-  text-align: center;
-  animation: fadeIn 1.5s;
+  background: linear-gradient(to right, #004080, #007bff); /* Dégradé bleu */
+  color: white; /* Texte en blanc */
+  padding: 60px; /* Espacement autour du contenu */
+  text-align: center; /* Centrer le texte */
+  animation: fadeIn 1.5s; /* Animation simple d’apparition */
 }
 
+/* ===== GALERIE D’IMAGES ===== */
 .gallery {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin: 30px;
+  display: flex; /* Mise en ligne des images */
+  gap: 10px; /* Espace entre les images */
+  justify-content: center; /* Centrer horizontalement */
+  margin: 30px; /* Espace autour de la galerie */
 }
 
 .gallery img {
-  width: 30%;
-  border-radius: 10px;
-  transition: transform 0.3s;
+  width: 30%; /* Chaque image prend 30% de la largeur du conteneur */
+  border-radius: 10px; /* Coins arrondis */
+  transition: transform 0.3s; /* Effet lisse au hover */
 }
 
 .gallery img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Agrandissement léger au survol */
 }
 
+/* ===== CARDS / CARTES D’INFO ===== */
 .card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 20px auto;
-  width: 80%;
-  animation: slideUp 1s;
+  background: white; /* Fond blanc pour se détacher du fond */
+  padding: 20px; /* Espacement interne */
+  border-radius: 8px; /* Coins arrondis */
+  margin: 20px auto; /* Centrage vertical et horizontal */
+  width: 80%; /* Largeur de la carte */
+  animation: slideUp 1s; /* Animation d’apparition de bas en haut */
 }
 
+/* ===== BOUTONS ===== */
 .btn {
-  padding: 10px 20px;
-  background: #004080;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
+  padding: 10px 20px; /* Espacement interne du bouton */
+  background: #004080; /* Couleur bleu foncé */
+  color: white; /* Texte en blanc */
+  border-radius: 5px; /* Coins arrondis */
+  text-decoration: none; /* Supprime soulignement si utilisé sur <a> */
+  display: inline-block; /* Pour que padding fonctionne bien sur <a> */
 }
 
+/* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {opacity: 0;} /* Début invisible */
+  to {opacity: 1;} /* Fin visible */
 }
 
 @keyframes slideUp {
-  from {transform: translateY(30px); opacity:0;}
-  to {transform: translateY(0); opacity:1;}
+  from {transform: translateY(30px); opacity:0;} /* Commence plus bas et invisible */
+  to {transform: translateY(0); opacity:1;} /* Remonte et devient visible */
 }
-/* Dashboard spécifique */
+
+/* ===== DASHBOARD / STATUT ===== */
 .status-card {
-  margin-top: 25px;
+  margin-top: 25px; /* Espace au-dessus de la carte de statut */
 }
 
 .logout-section {
-  margin-top: 25px;
-  text-align: center;
+  margin-top: 25px; /* Espace au-dessus de la section logout */
+  text-align: center; /* Centre le bouton déconnexion */
 }
 
-/* Amélioration légère */
+/* ===== AMÉLIORATION LÉGÈRE DES CARTES ===== */
 .dashboard-grid .card h2 {
-  color: #004080;
+  color: #004080; /* Titre bleu foncé */
 }
 
 .dashboard-grid .card p {
-  line-height: 1.4;
+  line-height: 1.4; /* Espacement vertical du texte pour plus de lisibilité */
 }
+
+/* ===== LIEN SPÉCIFIQUE ===== */
 #aaa{
-    text-decoration: none;
-    color: white;
+    text-decoration: none; /* Supprime le soulignement */
+    color: white; /* Texte blanc */
 }
