@@ -1,37 +1,48 @@
-document.addEventListener("DOMContentLoaded", () => {
+function verifierInscription() {
+  // Récupération des valeurs
+  let nom = document.getElementById("nom").value.trim();
+  let prenom = document.getElementById("prenom").value.trim();
+  let mail = document.getElementById("mail").value.trim();
+  let pass = document.getElementById("pass").value.trim();
+  let confirm = document.getElementById("confirm").value.trim();
 
-  const form = document.getElementById("loginForm");
-  if (!form) return;
+  // Vérification des champs vides
+  if (nom === "" || prenom === "" || mail === "" || pass === "" || confirm === "") {
+    alert("Veuillez remplir tous les champs.");
+    return false; // Empêche l'envoi du formulaire
+  }
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  // Vérification du mot de passe
+  if (pass !== confirm) {
+    alert("Les mots de passe ne correspondent pas.");
+    return false; // Empêche l'envoi du formulaire
+  }
 
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
+  // Vérification simple de l'email
+  if (!mail.includes("@")) {
+    alert("Veuillez entrer un email valide.");
+    return false; 
+  }
+}
+function verifierLogin() {
+  // Récupération des valeurs
+  let email = document.getElementById("email").value.trim();
+  let password = document.getElementById("password").value.trim();
 
-    // champs vides
-    if (email === "" || password === "") {
-      alert("Tous les champs sont obligatoires");
-      return;
-    }
+  // Vérification des champs vides
+  if (email === "" || password === "") {
+    alert("Veuillez remplir tous les champs.");
+    return false; // Empêche l'envoi du formulaire
+  }
 
-    // email valide
-    if (!email.includes("@") || !email.includes(".com")) {
-      alert("Email invalide");
-      return;
-    }
+  // Vérification simple de l'email
+  if (!email.includes("@")) {
+    alert("Veuillez entrer un email valide.");
+    return false;
+  }
 
-    // mot de passe
-    if (password.length <= 6) {
-      alert("Mot de passe > 6 caractères");
-      return;
-    }
-
-    // ✅ CONNEXION VALIDÉE
-    localStorage.setItem("isLoggedIn", "true");
-
-    // REDIRECTION FORCÉE
-    window.location.href = "dashboard.html";
-  });
-
-});
+  // Pour la démo : on autorise tout mot de passe
+  alert("Connexion réussie !");
+  window.location.href = "dashboard.html"; // Redirection vers le dashboard
+  return false; // Empêche le rechargement du formulaire
+}
