@@ -4,13 +4,6 @@
   <meta charset="UTF-8">
   <title>Portail Étudiant ESEN - Bulletin</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- 🔐 Protection accès -->
-  <script>
-    if (localStorage.getItem("isLoggedIn") !== "true") {
-      window.location.href = "login.html";
-    }
-  </script>
 </head>
 <body>
 
@@ -100,7 +93,7 @@
     </p>
 
     <div class="bulletin-actions">
-      <a href="dashboard.html" class="btn btn-secondary">
+      <a href="dashbord.html" class="btn btn-secondary">
         Retour au tableau de bord
       </a>
     </div>
@@ -111,12 +104,6 @@
   &copy; 2025 - Portail Étudiant ESEN. Projet de programmation Web.
 </footer>
 
-<script>
-  function logout() {
-    localStorage.removeItem("isLoggedIn");
-    window.location.href = "login.html";
-  }
-</script>
 
 </body>
 </html>
