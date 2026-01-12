@@ -9,37 +9,42 @@
 
 <header>
   <nav class="navbar">
-    <div class="logo">ESEN | Portail Étudiant</div>
+    <div>ESEN | Portail Étudiant</div>
     <ul>
       <li><a href="acceuil.html">Accueil</a></li>
-      <li><a href="dashboard.html">Tableau de bord</a></li>
+      <li><a href="dashbord.html">Tableau de bord</a></li>
       <li><a href="bulletin.html">Bulletin</a></li>
     </ul>
   </nav>
 </header>
 
-<main class="main-container">
+<main>
   <h1>Tableau de bord étudiant</h1>
-
   <section class="dashboard-grid">
     <article class="card">
-      <h2>Profil</h2>
-      <p><strong>Nom :</strong> Etudiant Exemple</p>
-      <p><strong>Numéro :</strong> 2025XXXX</p>
-      <p><strong>Section :</strong> Informatique</p>
-      <p><strong>Groupe :</strong> G2</p>
+        <div class="card-content">
+            <div class="card-text">
+                <h2>Profil</h2>
+                <p><strong>Nom :</strong> Étudiant Exemple</p>
+                <p><strong>Numéro :</strong> 2025XXXX</p>
+                <p><strong>Section :</strong> Informatique</p>
+                <p><strong>Groupe :</strong> G2</p>
+            </div>
+            <div class="card-image">
+                <img src="photo-de-profile.jpg" alt="Photo Profil">
+            </div>
+        </div>
     </article>
-
     <article class="card">
       <h2>Accès rapide</h2>
       <p>Consultez votre bulletin de notes.</p>
-      <a href="bulltein.html" class="btn btn-primary">Voir le bulletin</a>
+      <a href="bulletin.html" class="btn">Voir le bulletin</a>
     </article>
 
     <article class="card">
       <h2>Informations ESEN</h2>
       <p>
-        <a href="https://esen.rnu.tn/portail/">Emplois du temps, examens et annonces officielles:</a>  
+        <a href="https://esen.rnu.tn/portail/">Emplois du temps, examens et annonces officielles</a>
       </p>
     </article>
   </section>
@@ -50,10 +55,8 @@
   </section>
 
   <section class="card status-card">
-  <a href="acceuil.html" class="btn btn-secondary">
-    Se déconnecter
-  </a>
-</section>
+    <a href="acceuil.html" class="btn">Se déconnecter</a>
+  </section>
 </main>
 
 <footer>
@@ -61,5 +64,4 @@
 </footer>
 
 </body>
-</html>
 </html>
