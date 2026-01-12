@@ -5,23 +5,32 @@
   <title>Inscription ESEN</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="register-page">
 
-<header class="simple-header">Inscription Étudiant</header>
+<header class="title">Inscription Étudiant</header>
 
-<main class="form-container card">
+<main class="card">
   <form onsubmit="return verifierInscription()">
-    <h2>Créer un compte</h2>
+    <h2 class="h2">Créer un compte</h2>
+    <div class="form-group">
+        <input id="nom" placeholder="Nom">
+    </div>
+    <div class="form-group">
+        <input id="prenom" placeholder="Prénom">
+    </div>
+    <div class="form-group">
+        <input id="mail" type="email" placeholder="Email ESEN">
+    </div>
+    <div class="form-group">
+        <input id="pass" type="password" placeholder="Mot de passe">
+    </div>
+    <div class="form-group">
+        <input id="confirm" type="password" placeholder="Confirmation">
+    </div>
 
-    <input id="nom" placeholder="Nom">
-    <input id="prenom" placeholder="Prénom">
-    <input id="mail" type="email" placeholder="Email ESEN">
-    <input id="pass" type="password" placeholder="Mot de passe">
-    <input id="confirm" type="password" placeholder="Confirmation">
-
-   <form action="dashboard.html" method="get">
-    <button type="submit" class="btn btn-primary">S'inscrire</button>
-    </form>
+    <button type="submit" class="btn">
+      S'inscrire
+    </button>
   </form>
 </main>
 
