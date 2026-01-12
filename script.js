@@ -9,40 +9,45 @@ function verifierInscription() {
   // Vérification des champs vides
   if (nom === "" || prenom === "" || mail === "" || pass === "" || confirm === "") {
     alert("Veuillez remplir tous les champs.");
-    return false; // Empêche l'envoi du formulaire
+    return false; 
   }
 
   // Vérification du mot de passe
   if (pass !== confirm) {
     alert("Les mots de passe ne correspondent pas.");
-    return false; // Empêche l'envoi du formulaire
+    return false; 
   }
 
-  // Vérification simple de l'email
+  // Vérification  de l'email
   if (!mail.includes("@")) {
     alert("Veuillez entrer un email valide.");
     return false; 
   }
+   alert("Inscription réussie !");
+  window.location.href = "dashbord.html";
+  return false; 
 }
+
+
 function verifierLogin() {
-  // Récupération des valeurs
   let email = document.getElementById("email").value.trim();
   let password = document.getElementById("password").value.trim();
 
-  // Vérification des champs vides
   if (email === "" || password === "") {
     alert("Veuillez remplir tous les champs.");
-    return false; // Empêche l'envoi du formulaire
+    return false;
   }
 
-  // Vérification simple de l'email
   if (!email.includes("@")) {
     alert("Veuillez entrer un email valide.");
     return false;
   }
 
-  // Pour la démo : on autorise tout mot de passe
+  return true; 
+}
+
+function login() {
   alert("Connexion réussie !");
-  window.location.href = "dashboard.html"; // Redirection vers le dashboard
-  return false; // Empêche le rechargement du formulaire
+  window.location.href = "dashbord.html"; // redirection
+  return false; 
 }
